@@ -220,7 +220,7 @@ local function SBVJHR_fake_script() -- CumFast.LocalScript
 	local script = Instance.new('LocalScript', CumFast)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local speedBoost = 22
+		local speedBoost = 30
 		local function activateSpeedBoost()
 			local player = game.Players.LocalPlayer
 			local humanoid = player.Character and player.Character:FindFirstChildOfClass("Humanoid")
