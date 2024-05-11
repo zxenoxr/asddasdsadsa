@@ -331,7 +331,7 @@ if Input.KeyCode == Enum.KeyCode.Q then
 Window:Toggle()
 end
 end)
-while task.wait(5) do
+while task.wait(7) do
     print('Checking Settings')
     if loopws == true then
         print('set walkspeed again')
