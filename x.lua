@@ -17,6 +17,36 @@ local function niggers()
     warn('Failed To Give Nigger MaxHealth')
 end
 niggers()
+Folder.Toggle("Auto Collect Time", function(Status)
+while Status == true do
+    wait(1)
+    local part = Instance.new("Part")
+    part.Size = Vector3.new(10, 1, 10)
+    part.Position = Vector3.new(0, 23.081523895263672, 0)
+    part.Anchored = true
+    part.Parent = game.Workspace
+
+    local UserInputService = game:GetService("UserInputService")
+
+    local function teleportPlayer(player)
+        local character = player.Character
+        if character then
+            local humanoid = character:FindFirstChildOfClass("Humanoid")
+            if humanoid then
+                local targetPosition = part.Position + Vector3.new(0, part.Size.Y / 2 + humanoid.HipHeight + 5, 0)
+                local currentCFrame = character.PrimaryPart.CFrame
+                local newCFrame = CFrame.new(targetPosition)
+                for i = 0, 1, 0.05 do
+                    character:SetPrimaryPartCFrame(currentCFrame:Lerp(newCFrame, i))
+                    wait(0.05) -- Adjust the wait time for smoother or faster movement
+                end
+            end
+        end
+    end
+
+    teleportPlayer(game.Players.LocalPlayer)
+end
+end)
 Folder.Toggle("Fast Walkspeed", function(Status)
     if Status == true then
         loopws = true
