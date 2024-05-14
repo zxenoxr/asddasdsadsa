@@ -17,6 +17,17 @@ local function niggers()
     warn('Failed To Give Nigger MaxHealth')
 end
 niggers()
+Folder.Toggle("Fast Walkspeed", function(Status)
+    if Status == true then
+        loopws = true
+        local Humanoid = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") 
+        Humanoid.WalkSpeed = 45
+    else
+        loopws = false
+        local Humanoid = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") 
+        Humanoid.WalkSpeed = 16
+    end
+end)
 Folder.Toggle("Auto Collect Time", function(Status)
 while Status == true do
     wait(1)
